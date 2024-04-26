@@ -61,4 +61,32 @@ task prepare_bed {
 }
 
 
+task count_reads {
+  String Bam
+  String BamIndex
+  String ReferenceBED
+  String Chrom
+  String jobGroup
+  String refFasta
+  String refIndex
+  String tmp
+  String docker
+  
+  command {
+    set -eo pipefail
+    bedtools makewindows -b ${ReferenceBED} -w 500000 | awk -v OFS="\t" -v C="${Chrom}" '$1==C && NF==3' > ${tmp}/${Chrom}.windows.bed
+    samtools view -b -f 0x2 -F 0x400 -q 20 -T ${refFasta} ${Bam} ${Chrom} | intersectBed -sorted -nobuf -c -bed -b stdin -a ${tmp}/${Chrom}.windows.bed > ${Chrom}.counts.bed
+  }
+
+  runtime {
+    docker_image: docker
+    cpu: "1"
+    memory: "8 G"
+    job_group: jobGroup
+  }
+  output {
+    File counts_bed = "${Chrom}.counts.bed"
+  }
+}
+
 
