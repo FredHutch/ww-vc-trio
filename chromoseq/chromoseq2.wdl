@@ -79,10 +79,9 @@ task count_reads {
   }
 
   runtime {
-    docker_image: docker
+    docker_image: "ghcr.io/getwilds/samtools:1.11"
     cpu: "1"
     memory: "8 G"
-    job_group: jobGroup
   }
   output {
     File counts_bed = "${Chrom}.counts.bed"

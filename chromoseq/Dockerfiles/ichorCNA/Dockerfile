@@ -12,15 +12,14 @@ RUN wget -q --no-check-certificate https://github.com/shahcompbio/hmmcopy_utils/
 RUN cmake ./hmmcopy_utils-29a8d1d18dfd301600d5d91832e5fe231935058c && make
 
 ## BioC packages
-RUN R -e "install.packages('BiocManager',dependencies=TRUE, repos='http://cran.rstudio.com/')"
-RUN R -e "BiocManager::install('HMMcopy', ask = F, version = '3.16')"
-RUN R -e "BiocManager::install('GenomicRanges', ask = F,version = '3.16')"
-RUN R -e "BiocManager::install('GenomeInfoDb', ask = F, version = '3.16')"
+RUN Rscript -e "install.packages('BiocManager',dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN Rscript -e "BiocManager::install('HMMcopy', ask = F, version = '3.16')"
+RUN Rscript -e "BiocManager::install('GenomicRanges', ask = F,version = '3.16')"
+RUN Rscript -e "BiocManager::install('GenomeInfoDb', ask = F, version = '3.16')"
 RUN apt-get install -y libxml2-dev
 RUN R -e "BiocManager::install('BSgenome.Hsapiens.UCSC.hg19', ask = F, version = '3.16')"
 RUN R -e "BiocManager::install('BSgenome.Hsapiens.UCSC.hg38', ask = F,  version = '3.16')"
 RUN R -e "install.packages('remotes', dependencies = TRUE)"
-## CRAN packages
 RUN R -e "install.packages(c('foreach', 'data.table','doMC', 'ggplot2', 'strings'),dependencies=TRUE, repos='http://cran.rstudio.com/')"
 
 
