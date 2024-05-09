@@ -1,8 +1,0 @@
-{
-    "ChromoSeq.Translocations": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/input_files/chromoseq_translocations.bedpe",
-    "ChromoSeq.GenesBed": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/input_files/chromoseq_genes.bed",
-    "ChromoSeq.ReferenceBED":"/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/input_files/all_sequences.fa.bed.gz",
-    "ChromoSeq.tmp": "/tmp",
-    "ChromoSeq.OutputDir": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/output"
-
-}

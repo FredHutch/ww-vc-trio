@@ -5,7 +5,7 @@ workflow ChromoSeq {
   String Cram
   String CramIndex 
   String Name
-  String Gender
+  String Gender = "Male"
   String MappingSummary
   String? CoverageSummary
   String OutputDir
@@ -49,7 +49,7 @@ workflow ChromoSeq {
   
   String JobGroup  
 
-  String chromoseq_docker
+  # String chromoseq_docker
 
   call prepare_bed {
     input: Bedpe=Translocations,
@@ -57,7 +57,6 @@ workflow ChromoSeq {
     Reference=ReferenceBED,
     jobGroup=JobGroup,
     tmp=tmp,
-    docker=chromoseq_docker
   }
     
   call cov_qc as gene_qc {
@@ -68,7 +67,6 @@ workflow ChromoSeq {
     refFasta=Reference,
     jobGroup=JobGroup,
     tmp=tmp,
-    docker=chromoseq_docker
   }
 
   call cov_qc as sv_qc {
@@ -79,7 +77,6 @@ workflow ChromoSeq {
     refFasta=Reference,
     jobGroup=JobGroup,
     tmp=tmp,
-    docker=chromoseq_docker
   }
   
   call run_manta {
@@ -91,7 +88,6 @@ workflow ChromoSeq {
     Name=Name,
     jobGroup=JobGroup,
     tmp=tmp,
-    docker=chromoseq_docker
     duphold_static=DupholdStatic
   }
 
@@ -105,27 +101,26 @@ workflow ChromoSeq {
       Chrom=chr,
       jobGroup=JobGroup,
       tmp=tmp,
-      docker=chromoseq_docker
     }   
   }
     
-  call run_ichor {
-    input: Bam=Cram,
-    BamIndex=CramIndex,
-    refFasta=Reference,
-    ReferenceBED=ReferenceBED,
-    CountFiles=count_reads.counts_bed,
-    gender=Gender,
-    gcWig=gcWig,
-    mapWig=mapWig,
-    ponRds=ponRds,
-    centromeres=centromeres,
-    Name=Name,
-    genome = genome,
-    jobGroup=JobGroup,
-    tmp=tmp,
-    docker=chromoseq_docker
-  }
+  # call run_ichor {
+  #   input: Bam=Cram,
+  #   BamIndex=CramIndex,
+  #   refFasta=Reference,
+  #   ReferenceBED=ReferenceBED,
+  #   CountFiles=count_reads.counts_bed,
+  #   gender=Gender,
+  #   gcWig=gcWig,
+  #   mapWig=mapWig,
+  #   ponRds=ponRds,
+  #   centromeres=centromeres,
+  #   Name=Name,
+  #   genome = genome,
+  #   jobGroup=JobGroup,
+  #   tmp=tmp,
+  #   docker=chromoseq_docker
+  # }
   
   call run_varscan {
     input: Bam=Cram,
@@ -138,7 +133,6 @@ workflow ChromoSeq {
     Name=Name,
     jobGroup=JobGroup,
     tmp=tmp,
-    docker=chromoseq_docker
   }
   
   call run_pindel_region as run_pindel_flt3itd {
@@ -150,7 +144,6 @@ workflow ChromoSeq {
     genome=genome,
     jobGroup=JobGroup,
     tmp=tmp,
-    docker=chromoseq_docker
   }
 
   call combine_variants {
@@ -166,7 +159,6 @@ workflow ChromoSeq {
     MinVAF=minVarFreq,
     jobGroup=JobGroup,
     tmp=tmp,
-    docker=chromoseq_docker
   }
   
   call annotate_variants {
@@ -180,68 +172,67 @@ workflow ChromoSeq {
     Name=Name,
     jobGroup=JobGroup,
     tmp=tmp,
-    docker=chromoseq_docker
   }
   
-  call annotate_svs {
-    input: Vcf=run_manta.vcf,
-    CNV=run_ichor.seg,
-    refFasta=Reference,
-    refFastaIndex=ReferenceIndex,
-    Vepcache=VEP,
-    SVAnnot=SVDB,
-    Translocations=Translocations,
-    Cytobands=Cytobands,
-    minCNAsize=MinCNASize,
-    minCNAabund=MinCNAabund,
-    lowCNAsize=LowCNASize,
-    lowCNAabund=LowCNAabund,    
-    Name=Name,
-    gender=Gender,
-    jobGroup=JobGroup,
-    tmp=tmp,
-    docker=chromoseq_docker
-  }
+  # call annotate_svs {
+  #   input: Vcf=run_manta.vcf,
+  #   CNV=run_ichor.seg,
+  #   refFasta=Reference,
+  #   refFastaIndex=ReferenceIndex,
+  #   Vepcache=VEP,
+  #   SVAnnot=SVDB,
+  #   Translocations=Translocations,
+  #   Cytobands=Cytobands,
+  #   minCNAsize=MinCNASize,
+  #   minCNAabund=MinCNAabund,
+  #   lowCNAsize=LowCNASize,
+  #   lowCNAabund=LowCNAabund,    
+  #   Name=Name,
+  #   gender=Gender,
+  #   jobGroup=JobGroup,
+  #   tmp=tmp,
+  #   docker=chromoseq_docker
+  # }
   
-  call make_report {
-    input: SVVCF=annotate_svs.vcf,
-    GeneVCF=annotate_variants.annotated_filtered_vcf,
-    KnownGenes=prepare_bed.genes,
-    GeneQC=gene_qc.qc_out,
-    SVQC=sv_qc.qc_out,
-    MappingSummary=MappingSummary,
-    CoverageSummary=CoverageSummary,
-    Name=Name,
-    jobGroup=JobGroup,
-    docker=chromoseq_docker,
-    tmp=tmp
-  }
+  # call make_report {
+  #   input: SVVCF=annotate_svs.vcf,
+  #   GeneVCF=annotate_variants.annotated_filtered_vcf,
+  #   KnownGenes=prepare_bed.genes,
+  #   GeneQC=gene_qc.qc_out,
+  #   SVQC=sv_qc.qc_out,
+  #   MappingSummary=MappingSummary,
+  #   CoverageSummary=CoverageSummary,
+  #   Name=Name,
+  #   jobGroup=JobGroup,
+  #   docker=chromoseq_docker,
+  #   tmp=tmp
+  # }
   
 #  call make_igv {
 #    input: Name=Name
 #  }
   
-  call gather_files {
-    input: OutputFiles=[annotate_svs.vcf,
-    annotate_svs.vcf_index,
-    run_ichor.params,
-    run_ichor.seg,
-    run_ichor.genomewide_pdf,
-    run_ichor.allgenomewide_pdf,
-    run_ichor.rdata,run_ichor.wig,
-    run_ichor.correct_pdf,
-    gene_qc.qc_out,
-    gene_qc.region_dist,
-    gene_qc.global_dist,
-    sv_qc.qc_out,
-    sv_qc.region_dist,
-    annotate_variants.annotated_filtered_vcf,
-    make_report.report],  #make_bw.bigwig_file,
-#    make_igv.igv_xml],
-    OutputDir=OutputDir,
-    jobGroup=JobGroup,
-    docker=chromoseq_docker
-  }
+#   call gather_files {
+#     input: OutputFiles=[annotate_svs.vcf,
+#     annotate_svs.vcf_index,
+#     run_ichor.params,
+#     run_ichor.seg,
+#     run_ichor.genomewide_pdf,
+#     run_ichor.allgenomewide_pdf,
+#     run_ichor.rdata,run_ichor.wig,
+#     run_ichor.correct_pdf,
+#     gene_qc.qc_out,
+#     gene_qc.region_dist,
+#     gene_qc.global_dist,
+#     sv_qc.qc_out,
+#     sv_qc.region_dist,
+#     annotate_variants.annotated_filtered_vcf,
+#     make_report.report],  #make_bw.bigwig_file,
+# #    make_igv.igv_xml],
+#     OutputDir=OutputDir,
+#     jobGroup=JobGroup,
+#     docker=chromoseq_docker
+#   }
   
 }
 
@@ -251,7 +242,6 @@ task prepare_bed {
   String Reference
   String jobGroup
   String? tmp
-  String docker
   
   command <<<
     awk -v OFS="\t" '{ split($7,a,"_"); print $1,$2,$3,a[1],".",$9; print $4,$5,$6,a[2],".",$10; }' ${Bedpe} | sort -u -k 1,1V -k 2,2n > sv.bed
@@ -281,7 +271,6 @@ task cov_qc {
   String refFasta
   String jobGroup
   String tmp
-  String docker
   
   command <<<
     set -eo pipefail && \
@@ -315,7 +304,6 @@ task run_manta {
   String ReferenceBED
   String jobGroup
   String tmp
-  String docker
   String duphold_static
   
   command <<<
@@ -348,7 +336,6 @@ task count_reads {
   String refFasta
   String refIndex
   String tmp
-  String docker
   
   command {
     set -eo pipefail && \
@@ -442,7 +429,6 @@ task run_varscan {
   String Name
   String jobGroup
   String? tmp
-  String docker
   
   command <<<
     /usr/local/bin/samtools mpileup -f ${refFasta} -l ${CoverageBed} ${Bam} > ${tmp}/mpileup.out && \
@@ -477,7 +463,6 @@ task run_pindel_region {
   String jobGroup
   String? tmp
   String genome
-  String docker
   
   command <<<
     (set -eo pipefail && samtools view -T ${refFasta} ${Bam} ${Reg} | /opt/pindel-0.3-update/sam2pindel - ${tmp}/in.pindel ${default=250 Isize} tumor 0 Illumina-PairEnd) && \
@@ -537,7 +522,6 @@ task combine_variants {
   Float MinVAF
   String jobGroup
   String? tmp
-  String docker
 
   command {
     bcftools merge --force-samples -O z ${sep=" " VCFs} | \
@@ -571,7 +555,6 @@ task annotate_variants {
   String Name
   String jobGroup
   String? tmp
-  String docker
   
   command {
     set -eo pipefail && \
