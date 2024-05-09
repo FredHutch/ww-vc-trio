@@ -1,10 +1,10 @@
 {
-    "ChromoSeq.Cram": "s3://fh-pi-paguirigan-a-eco/preconcWGS/JR/61d60e93-d45d-4dbb-b36f-4bf47e086742/RO20033_JR-WGS.merged.merged.cram",
-    "ChromoSeq.CramIndex": "s3://fh-pi-paguirigan-a-eco/preconcWGS/JR/61d60e93-d45d-4dbb-b36f-4bf47e086742/RO20033_JR-WGS.merged.merged.cram.crai",
+    "ChromoSeq.Cram": "/fh/scratch/delete90/paguirigan_a/WGS/individualRGCrams/RO20033/RO20033_JR-WGS_230626_A00613_0562_AHNJWFDSX5.unmapped.cram",
+    "ChromoSeq.CramIndex": "/fh/scratch/delete90/paguirigan_a/WGS/individualRGCrams/RO20033/RO20033_JR-WGS_230626_A00613_0562_AHNJWFDSX5.unmapped.cram.crai",
     "ChromoSeq.Name": "test1",
     "ChromoSeq.MappingSummary": "",
     "ChromoSeq.CoverageSummary": "",
-    "ChromoSeq.OutputDir": "",
+    "ChromoSeq.OutputDir": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/output",
     "ChromoSeq.Translocations": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/input_files/chromoseq_translocations.bedpe",
     "ChromoSeq.GenesBed": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/input_files/chromoseq_genes.bed",
     "ChromoSeq.ReferenceBED": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/input_files/all_sequences.fa.bed.gz",
@@ -20,16 +20,17 @@
     "ChromoSeq.MantaConfig": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/input_files/configManta.hg38.10kb.py.ini",
     "ChromoSeq.Reference": "/fh/fast/paguirigan_a/pub/ReferenceDataSets/genome_data/human/hg38/Gencode_GRCh38.primary_assembly.genome.fa",
     "ChromoSeq.ReferenceIndex": "/fh/fast/paguirigan_a/pub/ReferenceDataSets/genome_data/human/hg38/Gencode_GRCh38.primary_assembly.genome.fa.fai",
-
     "ChromoSeq.gcWig": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/input_files/gc_hg38_500kb.wig",
     "ChromoSeq.mapWig": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/input_files/map_hg38_500kb.wig",
     "ChromoSeq.centromeres": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/input_files/GRCh38.GCA_000001405.2_centromere_acen.txt",
     "ChromoSeq.ponRds": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/input_files/nextera_hg38_500kb_median_normAutosome_median.rds_median.033020.XY_median.rds",
     "ChromoSeq.DupholdStatic": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/input_files/duphold_static",
 
-    "ChromoSeq.VEP": "/gscmnt/gc2709/info/production_reference_GRCh38DH/CLE/IDTExome/VEP_cache/",
+    "ChromoSeq.VEP": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/VEP_cache/",
     
+    "ChromoSeq.genomeStyle": "UCSC",
+    "ChromoSeq.Gender": "male",
+    "ChromoSeq.chromoseq_docker": "/hpc/temp/paguirigan_a/user/sagarwa2/.apptainer_cache/mgibio_chromoseq_sha256_672902ed48f88a26ca782d4f4db44ec52f7d37576012db13dc01ef579acbd49d.sif"
 
-    "ChromoSeq.chromoseq_docker": "mgibio/basespace_chromoseq:v12"
 }
 
