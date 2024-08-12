@@ -10,6 +10,10 @@ struct referenceGenome {
 	File ref_pac
 	File ref_sa
 	String ref_name
+  File dbSNP_vcf_index
+  File dbSNP_vcf
+  File known_indels_sites_indices
+  File known_indels_sites_VCFs
 }
 
 
@@ -17,11 +21,6 @@ workflow mutation_calling {
   input {
 	Array[File] tumorCram
 	referenceGenome refGenome
-	File dbSNP_vcf
-	File dbSNP_vcf_index
-	File known_indels_sites_VCFs
-	File known_indels_sites_indices
-
   }
  
   # Scatter for "tumor" samples   
@@ -41,11 +40,7 @@ workflow mutation_calling {
 	call ApplyBaseRecalibrator as tumorApplyBaseRecalibrator{
       input:
         input_bam = tumorMarkDuplicates.markDuplicates_bam,
-        input_bam_index = tumorMarkDuplicates.markDuplicates_bai,
-        dbSNP_vcf = dbSNP_vcf,
-        dbSNP_vcf_index = dbSNP_vcf_index,
-        known_indels_sites_VCFs = known_indels_sites_VCFs,
-        known_indels_sites_indices = known_indels_sites_indices,
+        # input_bam_index = tumorMarkDuplicates.markDuplicates_bai,
         refGenome = refGenome
       }
   }
@@ -64,16 +59,15 @@ output {
 
 task BwaMem{
   
-  ## Convert unmapped CRAM -> fastq -> aligned SAM -> aligned BAM -> sorted aligned BAM
+  ## Convert unmapped CRAM -> fastq -> aligned SAM -> sorted aligned BAM
 
 	input{
 		File input_cram
 		referenceGenome refGenome
-    Int threads = 24
+    Int threads = 16
 	}
 
 	String base_file_name = basename(input_cram, ".cram")
-	String ref_fasta_local = basename(refGenome.ref_fasta)
 	String read_group_id = "ID:" + base_file_name
 	String sample_name = "SM:" + base_file_name
 	String platform = "illumina"
@@ -81,18 +75,11 @@ task BwaMem{
 
   command <<<
   set -eo pipefail && \
-  cp ~{refGenome.ref_fasta} . && \
-  cp ~{refGenome.ref_fasta_index} . && \
-  cp ~{refGenome.ref_dict} . && \
-  cp ~{refGenome.ref_amb} . && \
-  cp ~{refGenome.ref_ann} . && \
-  cp ~{refGenome.ref_bwt} . && \
-  cp ~{refGenome.ref_pac} . && \
-  cp ~{refGenome.ref_sa} . && \
   samtools fastq -@ ~{threads-1} ~{input_cram} | \
-  bwa mem -p -v 3 -t ~{threads} -M -R '@RG\t~{read_group_id}\t~{sample_name}\t~{platform_info}' ~{ref_fasta_local} - | \
-  samtools view -bS -@ ~{threads-1} - | \
-  samtools sort -@ ~{threads-1} -o ~{base_file_name}.sorted_query_aligned.bam -
+  bwa mem -p -v 3 -t ~{threads} -M -R '@RG\t~{read_group_id}\t~{sample_name}\t~{platform_info}' ~{refGenome.ref_fasta} - > ~{base_file_name}.sam && \
+  # samtools view -bS -@ ~{threads-1} -o ~{base_file_name}.aligned.bam ~{base_file_name}.sam && \
+  # samtools sort -@ ~{threads-1} -o ~{base_file_name}.sorted_query_aligned.bam ~{base_file_name}.aligned.bam
+  samtools sort -@ ~{threads-1} -o ~{base_file_name}.sorted_query_aligned.bam ~{base_file_name}.sam
   >>>
 
   output {
@@ -100,7 +87,7 @@ task BwaMem{
   }
   
   runtime {
-    memory: "48 GB"
+    memory: "64 GB"
     cpu: "~{threads}"
     docker: "ghcr.io/getwilds/bwa:0.7.17"
   }
@@ -132,7 +119,7 @@ task MarkDuplicates{
   runtime {
     docker: "ghcr.io/getwilds/gatk:4.3.0.0"
     memory: "48 GB"
-    cpu: 16
+    cpu: 8
   }
 
   output {
@@ -148,33 +135,17 @@ task MarkDuplicates{
 task ApplyBaseRecalibrator{
   input{
     File input_bam
-    File input_bam_index
-    File dbSNP_vcf
-    File dbSNP_vcf_index
-    File known_indels_sites_VCFs
-    File known_indels_sites_indices
+    # File input_bam_index
     referenceGenome refGenome
   }
   
   String base_file_name = basename(input_bam, ".duplicates_marked.bam")
-  String ref_fasta_local = basename(refGenome.ref_fasta)
-  String dbSNP_vcf_local = basename(dbSNP_vcf)
-  String known_indels_sites_VCFs_local = basename(known_indels_sites_VCFs)
 
   command <<<
     set -eo pipefail && \
-    cp ~{refGenome.ref_fasta} . && \
-    cp ~{refGenome.ref_fasta_index} . && \
-    cp ~{refGenome.ref_dict} . && \
-    cp ~{dbSNP_vcf} . && \
-    cp ~{dbSNP_vcf_index} . && \
-    cp ~{known_indels_sites_VCFs} . && \
-    cp ~{known_indels_sites_indices} . && \
     samtools index ~{input_bam} && \
-    gatk --java-options "-Xms8g" BaseRecalibrator -R ~{ref_fasta_local} -I ~{input_bam} -O ~{base_file_name}.recal_data.csv \
-        --known-sites ~{dbSNP_vcf_local} --known-sites ~{known_indels_sites_VCFs_local} && \
-    gatk --java-options "-Xms8g" ApplyBQSR -bqsr ~{base_file_name}.recal_data.csv -I ~{input_bam} \
-        -O ~{base_file_name}.recal.bam -R ~{ref_fasta_local} && \
+    gatk --java-options "-Xms8g" BaseRecalibrator -R ~{refGenome.ref_fasta} -I ~{input_bam} -O ~{base_file_name}.recal_data.csv --known-sites ~{refGenome.dbSNP_vcf} --known-sites ~{refGenome.known_indels_sites_VCFs} && \
+    gatk --java-options "-Xms8g" ApplyBQSR -bqsr ~{base_file_name}.recal_data.csv -I ~{input_bam} -O ~{base_file_name}.recal.bam -R ~{refGenome.ref_fasta} && \
     # finds the current sort order of this bam file
     samtools view -H ~{base_file_name}.recal.bam | grep @SQ | sed 's/@SQ\tSN:\|LN://g' > ~{base_file_name}.sortOrder.txt
   >>>
@@ -187,7 +158,7 @@ task ApplyBaseRecalibrator{
 
   runtime {
     memory: "36 GB"
-    cpu: 12
+    cpu: 6
     docker: "ghcr.io/getwilds/gatk:4.3.0.0"
   }
 }

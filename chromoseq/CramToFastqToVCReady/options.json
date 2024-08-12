@@ -5,6 +5,6 @@
     "default_runtime_attributes": {
         "maxRetries": 0
     },
-    "final_workflow_outputs_dir": "/fh/scratch/delete90/paguirigan_a/sanaz/variant_calling/alignedBam",
+    "final_workflow_outputs_dir": "/fh/scratch/delete90/paguirigan_a/sanaz/variant_calling/aligned_bam",
     "use_relative_output_paths": true
 }
