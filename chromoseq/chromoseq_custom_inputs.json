@@ -1,0 +1,73 @@
+{
+    "ChromoSeq.MappingSummary": "",
+    "ChromoSeq.CoverageSummary": "",
+    "ChromoSeq.OutputDir": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/output",
+    "ChromoSeq.Translocations": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/input_files/chromoseq_translocations.bedpe",
+    "ChromoSeq.GenesBed": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/input_files/chromoseq_genes.bed",
+
+    "ChromoSeq.ReferenceBED": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/reference_files/all_sequences_chr25.fa.bed.gz",
+    "ChromoSeq.ReferenceBEDIndex": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/reference_files/all_sequences_chr25.fa.bed.gz.tbi",
+    "ChromoSeq.tmp": "/tmp",
+    "ChromoSeq.genome": "hg38",
+    "ChromoSeq.Cytobands": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/input_files/hg38.cytoBandIdeo.bed.gz",
+    "ChromoSeq.SVDB": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/input_files/chromoseq_sv_filter.bedpe.gz",
+    "ChromoSeq.CustomAnnotationVcf":"/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/input_files/chromoseq_custom_anntations.040920.vcf.gz",
+    "ChromoSeq.CustomAnnotationIndex":"/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/input_files/chromoseq_custom_anntations.040920.vcf.gz.tbi",
+    "ChromoSeq.CustomAnnotationParameters":"MYELOSEQ,vcf,exact,0,TCGA_AC,MDS_AC,MYELOSEQBLACKLIST",
+    "ChromoSeq.HotspotVCF":"/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/input_files/chromoseq_hotspot.vcf.gz",
+    "ChromoSeq.MantaConfig": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/input_files/configManta.hg38.py.ini",
+
+    "ChromoSeq.Reference": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/reference_files/GRCh38/Gencode_GRCh38.primary_assembly.genome.fa",
+    "ChromoSeq.ReferenceIndex": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/reference_files/GRCh38/Gencode_GRCh38.primary_assembly.genome.fa.fai",
+    
+    "ChromoSeq.gcWig": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/input_files/gc_hg38_500kb.wig",
+    "ChromoSeq.mapWig": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/input_files/map_hg38_500kb.wig",
+    "ChromoSeq.centromeres": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/input_files/GRCh38.GCA_000001405.2_centromere_acen.txt",
+    "ChromoSeq.ponRds": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/input_files/nextera_hg38_500kb_median_normAutosome_median.rds_median.n9.gr.rds",
+    "ChromoSeq.DupholdStatic": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/input_files/duphold_static",
+
+    "ChromoSeq.ichorToVCF":"/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/workflow_scripts/ichorToVCF.pl",
+    "ChromoSeq.VEP": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/VEP_cache",
+    "ChromoSeq.addReadCountsToVcfCRAM3": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/workflow_scripts/addReadCountsToVcfCRAM3.py", 
+    
+    "ChromoSeq.genomeStyle": "UCSC",
+    "ChromoSeq.Gender": "male",
+    "ChromoSeq.chromoseq_docker": "mgibio/basespace_chromoseq:v17",
+
+    "ChromoSeq.MultipleSamples":[
+        {
+            "Cram": "/fh/scratch/delete90/paguirigan_a/sanaz/variant_calling/aligned_bam/RO20053_JR-WGS_230705_A00613_0568_BHW3JTDSX5.unmapped.recal.bam",
+            "CramIndex": "/fh/scratch/delete90/paguirigan_a/sanaz/variant_calling/aligned_bam/RO20053_JR-WGS_230705_A00613_0568_BHW3JTDSX5.unmapped.recal.bai",
+            "Name":"RO20053_JR-WGS_230705_A00613_0568_BHW3JTDSX5"
+        },
+        {
+            "Cram": "/fh/scratch/delete90/paguirigan_a/sanaz/variant_calling/aligned_bam/RO50935_JR-WGS_230629_A00613_0565_AHNJY5DSX5.unmapped.recal.bam",
+            "CramIndex": "/fh/scratch/delete90/paguirigan_a/sanaz/variant_calling/aligned_bam/RO50935_JR-WGS_230629_A00613_0565_AHNJY5DSX5.unmapped.recal.bai",
+            "Name":"RO50935_JR-WGS_230629_A00613_0565_AHNJY5DSX5"
+        },
+        {
+            "Cram": "/fh/scratch/delete90/paguirigan_a/sanaz/variant_calling/aligned_bam/RO20069_JR-WGS_230629_A00613_0565_AHNJY5DSX5.unmapped.recal.bam",
+            "CramIndex": "/fh/scratch/delete90/paguirigan_a/sanaz/variant_calling/aligned_bam/RO20069_JR-WGS_230629_A00613_0565_AHNJY5DSX5.unmapped.recal.bai",
+            "Name":"RO20069_JR-WGS_230629_A00613_0565_AHNJY5DSX5"
+        },
+        {
+            "Cram": "/fh/scratch/delete90/paguirigan_a/sanaz/variant_calling/aligned_bam/RO10001_JR-WGS_230626_A00613_0562_AHNJWFDSX5.unmapped.recal.bam",
+            "CramIndex": "/fh/scratch/delete90/paguirigan_a/sanaz/variant_calling/aligned_bam/RO10001_JR-WGS_230626_A00613_0562_AHNJWFDSX5.unmapped.recal.bai",
+            "Name": "RO10001_JR-WGS_230626_A00613_0562_AHNJWFDSX5"
+        },
+        {
+            "Cram": "/fh/scratch/delete90/paguirigan_a/sanaz/variant_calling/aligned_bam/RO50282_JR-WGS_230626_A00613_0563_BHNJWHDSX5.unmapped.recal.bam",
+            "CramIndex": "/fh/scratch/delete90/paguirigan_a/sanaz/variant_calling/aligned_bam/RO50282_JR-WGS_230626_A00613_0563_BHNJWHDSX5.unmapped.recal.bai",
+            "Name": "RO50282_JR-WGS_230626_A00613_0563_BHNJWHDSX5"
+        },
+        {
+            "Cram": "/fh/scratch/delete90/paguirigan_a/sanaz/variant_calling/aligned_bam/RO50911_JR-WGS_230626_A00613_0562_AHNJWFDSX5.unmapped.recal.bam",
+            "CramIndex": "/fh/scratch/delete90/paguirigan_a/sanaz/variant_calling/aligned_bam/RO50911_JR-WGS_230626_A00613_0562_AHNJWFDSX5.unmapped.recal.bai",
+            "Name": "RO50911_JR-WGS_230626_A00613_0562_AHNJWFDSX5"
+        }
+        
+    ]
+    
+    
+}
+
