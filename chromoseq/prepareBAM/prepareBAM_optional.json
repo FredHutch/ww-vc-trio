@@ -1,0 +1,10 @@
+{
+    "workflow_failure_mode": "ContinueWhilePossible",
+    "write_to_cache": true,
+    "read_from_cache": true,
+    "default_runtime_attributes": {
+        "maxRetries": 2
+    },
+    "final_workflow_outputs_dir": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/output_prepareBAM",
+    "use_relative_output_paths": true
+}

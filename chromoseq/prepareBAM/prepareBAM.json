@@ -1,0 +1,39 @@
+{
+    "prepareBAM.refGenome": {
+        "ref_fasta": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/reference_files/GRCh38/Gencode_GRCh38.primary_assembly.genome.fa",
+        "ref_fasta_index": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/reference_files/GRCh38/Gencode_GRCh38.primary_assembly.genome.fa.fai",
+        "ref_dict": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/reference_files/GRCh38/Gencode_GRCh38.primary_assembly.genome.dict",
+        "ref_pac": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/reference_files/GRCh38/Gencode_GRCh38.primary_assembly.genome.fa.pac",
+        "ref_sa": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/reference_files/GRCh38/Gencode_GRCh38.primary_assembly.genome.fa.sa",
+        "ref_amb": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/reference_files/GRCh38/Gencode_GRCh38.primary_assembly.genome.fa.amb",
+        "ref_ann": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/reference_files/GRCh38/Gencode_GRCh38.primary_assembly.genome.fa.ann",
+        "ref_bwt": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/reference_files/GRCh38/Gencode_GRCh38.primary_assembly.genome.fa.bwt",
+        "ref_name": "hg38",
+        "dbSNP_vcf_index": "/fh/fast/paguirigan_a/pub/ReferenceDataSets/genome_data/human/hg38/dbsnp_146.hg38.vcf.gz.tbi",
+        "dbSNP_vcf": "/fh/fast/paguirigan_a/pub/ReferenceDataSets/genome_data/human/hg38/dbsnp_146.hg38.vcf.gz",
+        "known_indels_sites_indices": "/fh/fast/paguirigan_a/pub/ReferenceDataSets/genome_data/human/hg38/Mills_and_1000G_gold_standard.indels.hg38.vcf.gz.tbi",
+        "known_indels_sites_VCFs": "/fh/fast/paguirigan_a/pub/ReferenceDataSets/genome_data/human/hg38/Mills_and_1000G_gold_standard.indels.hg38.vcf.gz"
+        },
+
+    "prepareBAM.sample_ids":["RO50990", "RO51053", "RO51061"],
+    "prepareBAM.tumorSamples":{
+    "RO50990": [
+        "s3://fh-pi-paguirigan-a-eco/preconcWGS/JR/6b47c763-0623-4cf4-bc85-1ee6625e097f/individualRGCrams/RO50990/RO50990_JR-WGS_230626_A00613_0562_AHNJWFDSX5.unmapped.cram",
+        "s3://fh-pi-paguirigan-a-eco/preconcWGS/JR/6b47c763-0623-4cf4-bc85-1ee6625e097f/individualRGCrams/RO50990/RO50990_JR-WGS_230626_A00613_0563_BHNJWHDSX5.unmapped.cram",
+        "s3://fh-pi-paguirigan-a-eco/preconcWGS/JR/6b47c763-0623-4cf4-bc85-1ee6625e097f/individualRGCrams/RO50990/RO50990_JR-WGS_230629_A00613_0565_AHNJY5DSX5.unmapped.cram",
+        "s3://fh-pi-paguirigan-a-eco/preconcWGS/JR/6b47c763-0623-4cf4-bc85-1ee6625e097f/individualRGCrams/RO50990/RO50990_JR-WGS_230705_A00613_0568_BHW3JTDSX5.unmapped.cram"
+    ],
+    "RO51053": [
+        "s3://fh-pi-paguirigan-a-eco/preconcWGS/JR/6b47c763-0623-4cf4-bc85-1ee6625e097f/individualRGCrams/RO51053/RO51053_JR-WGS_230626_A00613_0562_AHNJWFDSX5.unmapped.cram",
+        "s3://fh-pi-paguirigan-a-eco/preconcWGS/JR/6b47c763-0623-4cf4-bc85-1ee6625e097f/individualRGCrams/RO51053/RO51053_JR-WGS_230626_A00613_0563_BHNJWHDSX5.unmapped.cram",
+        "s3://fh-pi-paguirigan-a-eco/preconcWGS/JR/6b47c763-0623-4cf4-bc85-1ee6625e097f/individualRGCrams/RO51053/RO51053_JR-WGS_230629_A00613_0565_AHNJY5DSX5.unmapped.cram",
+        "s3://fh-pi-paguirigan-a-eco/preconcWGS/JR/6b47c763-0623-4cf4-bc85-1ee6625e097f/individualRGCrams/RO51053/RO51053_JR-WGS_230705_A00613_0568_BHW3JTDSX5.unmapped.cram"
+    ],
+    "RO51061": [
+        "s3://fh-pi-paguirigan-a-eco/preconcWGS/JR/6b47c763-0623-4cf4-bc85-1ee6625e097f/individualRGCrams/RO51061/RO51061_JR-WGS_230626_A00613_0562_AHNJWFDSX5.unmapped.cram",
+        "s3://fh-pi-paguirigan-a-eco/preconcWGS/JR/6b47c763-0623-4cf4-bc85-1ee6625e097f/individualRGCrams/RO51061/RO51061_JR-WGS_230626_A00613_0563_BHNJWHDSX5.unmapped.cram",
+        "s3://fh-pi-paguirigan-a-eco/preconcWGS/JR/6b47c763-0623-4cf4-bc85-1ee6625e097f/individualRGCrams/RO51061/RO51061_JR-WGS_230629_A00613_0565_AHNJY5DSX5.unmapped.cram",
+        "s3://fh-pi-paguirigan-a-eco/preconcWGS/JR/6b47c763-0623-4cf4-bc85-1ee6625e097f/individualRGCrams/RO51061/RO51061_JR-WGS_230705_A00613_0568_BHW3JTDSX5.unmapped.cram"
+    ]
+}
+}
