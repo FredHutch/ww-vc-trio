@@ -1,0 +1,5 @@
+chromoseq/VEP_cache/
+chromoseq/output_chromoseq/
+chromoseq/output_prepareBAM/
+chromoseq/workflow_files/
+chromoseq/reference_files/
