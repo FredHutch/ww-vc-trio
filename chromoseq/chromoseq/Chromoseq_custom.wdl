@@ -65,15 +65,7 @@ workflow ChromoSeq {
   File addReadCountsToVcfCRAM3
 
   }
-  
-# call prepare_bed {
-#   input:
-#     Bedpe=Translocations,
-#     Bed=GenesBed,
-#     Reference=ReferenceBED,
-#     tmp=tmp,
-#     docker=chromoseq_docker
-# }
+
 
 scatter (sample in MultipleSamples){
       
@@ -665,7 +657,7 @@ task annovar {
   >>>
 
   runtime {
-    docker: "ghcr.io/getwilds/annovar:${genome}"
+    docker: "getwilds/annovar:${genome}"
     memory: "4 GB"
     cpu: "2"
   }

@@ -106,7 +106,7 @@ task BwaMem{
   runtime {
     memory: "64 GB"
     cpu: "~{threads}"
-    docker: "ghcr.io/getwilds/bwa:0.7.17"
+    docker: "getwilds/bwa:0.7.17"
   }
 }
 
@@ -132,7 +132,7 @@ task MarkDuplicates{
   >>>
 
   runtime {
-    docker: "ghcr.io/getwilds/gatk:4.3.0.0"
+    docker: "getwilds/gatk:4.3.0.0"
     memory: "48 GB"
     cpu: 8
   }
@@ -171,7 +171,7 @@ task ApplyBaseRecalibrator{
   runtime {
     memory: "36 GB"
     cpu: 6
-    docker: "ghcr.io/getwilds/gatk:4.3.0.0"
+    docker: "getwilds/gatk:4.3.0.0"
   }
 }
 
@@ -198,7 +198,7 @@ task mergeBAMsPerSample_renameReadGroup{
     runtime {
         memory: "36 GB"
         cpu: "~{num_threads}"
-        docker: "ghcr.io/getwilds/gatk:4.3.0.0"
+        docker: "getwilds/gatk:4.3.0.0"
     }
 
 }
@@ -233,7 +233,7 @@ task MarkDuplicates_ApplyBaseRecalibrator {
   runtime{
     memory: "48 GB"
     cpu: 12
-    docker: "ghcr.io/getwilds/gatk:4.3.0.0"
+    docker: "getwilds/gatk:4.3.0.0"
   }
 
 }
