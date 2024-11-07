@@ -3,8 +3,8 @@
     "write_to_cache": true,
     "read_from_cache": true,
     "default_runtime_attributes": {
-        "maxRetries": 1
+        "maxRetries": 2
     },
-    "final_workflow_outputs_dir": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/output_chromoseq",
+    "final_workflow_outputs_dir": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/chromoseq_output",
     "use_relative_output_paths": true
 }

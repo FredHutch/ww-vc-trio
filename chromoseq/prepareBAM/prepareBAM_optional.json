@@ -5,6 +5,6 @@
     "default_runtime_attributes": {
         "maxRetries": 2
     },
-    "final_workflow_outputs_dir": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/output_prepareBAM",
+    "final_workflow_outputs_dir": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output",
     "use_relative_output_paths": true
 }

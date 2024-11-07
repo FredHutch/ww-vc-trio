@@ -36,33 +36,257 @@
 
     "ChromoSeq.MultipleSamples":[
         {
-            "Cram": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/output_prepareBAM/RO10001.bam",
-            "CramIndex": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/output_prepareBAM/RO10001.bai",
-            "Name":"RO10001"
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/MJW922010.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/MJW922010.bai",
+            "Name": "MJW922010"
         },
         {
-            "Cram": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/output_prepareBAM/RO20033.bam",
-            "CramIndex": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/output_prepareBAM/RO20033.bai",
-            "Name":"RO20033"
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO10001.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO10001.bai",
+            "Name": "RO10001"
         },
         {
-            "Cram": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/output_prepareBAM/RO50990.bam",
-            "CramIndex": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/output_prepareBAM/RO50990.bai",
-            "Name":"RO50990"
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO20030.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO20030.bai",
+            "Name": "RO20030"
         },
         {
-            "Cram": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/output_prepareBAM/RO51053.bam",
-            "CramIndex": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/output_prepareBAM/RO51053.bai",
-            "Name":"RO51053"
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO20033.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO20033.bai",
+            "Name": "RO20033"
         },
         {
-            "Cram": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/output_prepareBAM/RO51061.bam",
-            "CramIndex": "/fh/fast/paguirigan_a/sanaz/Research/VariantCalling/ww-vc-trio_sanaz/chromoseq/output_prepareBAM/RO51061.bai",
-            "Name":"RO51061"
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO20038.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO20038.bai",
+            "Name": "RO20038"
+        },
+        {
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO20051.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO20051.bai",
+            "Name": "RO20051"
+        },
+        {
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO20053.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO20053.bai",
+            "Name": "RO20053"
+        },
+        {
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO20058.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO20058.bai",
+            "Name": "RO20058"
+        },
+        {
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO20064.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO20064.bai",
+            "Name": "RO20064"
+        },
+        {
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO20065.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO20065.bai",
+            "Name": "RO20065"
+        },
+        {
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO20069.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO20069.bai",
+            "Name": "RO20069"
+        },
+        {
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO20071.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO20071.bai",
+            "Name": "RO20071"
+        },
+        {
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO20072.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO20072.bai",
+            "Name": "RO20072"
+        },
+        {
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO20073.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO20073.bai",
+            "Name": "RO20073"
+        },
+        {
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO20079.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO20079.bai",
+            "Name": "RO20079"
+        },
+        {
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO20081.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO20081.bai",
+            "Name": "RO20081"
+        },
+        {
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO20088.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO20088.bai",
+            "Name": "RO20088"
+        },
+        {
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO20125.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO20125.bai",
+            "Name": "RO20125"
+        },
+        {
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50260.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50260.bai",
+            "Name": "RO50260"
+        },
+        {
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50282.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50282.bai",
+            "Name": "RO50282"
+        },
+        {
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50456.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50456.bai",
+            "Name": "RO50456"
+        },
+        {
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50644.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50644.bai",
+            "Name": "RO50644"
+        },
+        {
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50768.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50768.bai",
+            "Name": "RO50768"
+        },
+        {
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50793.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50793.bai",
+            "Name": "RO50793"
+        },
+        {
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50795.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50795.bai",
+            "Name": "RO50795"
+        },
+        {
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50796.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50796.bai",
+            "Name": "RO50796"
+        },
+        {
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50797.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50797.bai",
+            "Name": "RO50797"
+        },
+        {
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50801.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50801.bai",
+            "Name": "RO50801"
+        },
+        {
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50802.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50802.bai",
+            "Name": "RO50802"
+        },
+        {
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50817.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50817.bai",
+            "Name": "RO50817"
+        },
+        {
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50822.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50822.bai",
+            "Name": "RO50822"
+        },
+        {
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50843.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50843.bai",
+            "Name": "RO50843"
+        },
+        {
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50847.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50847.bai",
+            "Name": "RO50847"
+        },
+        {
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50852.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50852.bai",
+            "Name": "RO50852"
+        },
+        {
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50866.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50866.bai",
+            "Name": "RO50866"
+        },
+        {
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50870.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50870.bai",
+            "Name": "RO50870"
+        },
+        {
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50872.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50872.bai",
+            "Name": "RO50872"
+        },
+        {
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50884.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50884.bai",
+            "Name": "RO50884"
+        },
+        {
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50885.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50885.bai",
+            "Name": "RO50885"
+        },
+        {
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50900.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50900.bai",
+            "Name": "RO50900"
+        },
+        {
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50906.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50906.bai",
+            "Name": "RO50906"
+        },
+        {
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50910.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50910.bai",
+            "Name": "RO50910"
+        },
+        {
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50911.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50911.bai",
+            "Name": "RO50911"
+        },
+        {
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50929.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50929.bai",
+            "Name": "RO50929"
+        },
+        {
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50935.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50935.bai",
+            "Name": "RO50935"
+        },
+        {
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50967.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50967.bai",
+            "Name": "RO50967"
+        },
+        {
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50986.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50986.bai",
+            "Name": "RO50986"
+        },
+        {
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50990.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO50990.bai",
+            "Name": "RO50990"
+        },
+        {
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO51053.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO51053.bai",
+            "Name": "RO51053"
+        },
+        {
+            "Cram": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO51061.bam",
+            "CramIndex": "/hpc/temp/paguirigan_a/user/sagarwa2/chromoseq/prepareBAM_output/RO51061.bai",
+            "Name": "RO51061"
         }
-        
     ]
-    
+        
     
 }
 
